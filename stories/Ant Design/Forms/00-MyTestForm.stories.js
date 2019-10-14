@@ -1,8 +1,5 @@
 import React from "react"
-import Layout from "components/Layout/DefaultLayout"
-
 import "antd/dist/antd.css"
-
 import
 {
   Form,
@@ -22,6 +19,10 @@ import
   Col,
   Card
 } from "antd"
+
+export default {
+  title: "Ant Design|Forms/My Test Form",
+}
 
 const GenderRadioGroup = props => (
   <Radio.Group {...props} buttonStyle="solid">
@@ -110,7 +111,6 @@ const fieldData2 = {
       name: "prb",
       checkedChildren: "Yes",
       unCheckedChildren: "No",
-      size: 'small'
     },
     fieldDecoratorOptions: {
       initialValue: "m",
@@ -144,7 +144,6 @@ const fieldData2 = {
       name: "abh",
       checkedChildren: "Yes",
       unCheckedChildren: "No",
-      
     },
     fieldDecoratorOptions: {
       initialValue: "m",
@@ -269,10 +268,10 @@ class WrappedForm extends React.Component
     return (
       <div>
         <Row gutter={24}>
-          <Col sm={24} lg={12}>
+          <Col sm={12}>
             <NakedForm {...fields} onChange={this.handleFormChange} />
           </Col>
-          <Col  sm={24} lg={12}>
+          <Col sm={12}>
             <Row>
               <Col>
                 <Card title='Recommendations'>
@@ -294,7 +293,7 @@ class WrappedForm extends React.Component
     )
   }
 }
-export default () => (<Layout><WrappedForm /></Layout>)
+export const StoringData = () => <WrappedForm />
 
 // Snippets
 //  fieldDecoratorOptions: {

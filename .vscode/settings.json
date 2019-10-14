@@ -1,0 +1,6 @@
+{
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "editor.fontFamily": "'Latin Modern Mono Prop','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.formatOnType": true,
+  "editor.fontSize": 15
+}
