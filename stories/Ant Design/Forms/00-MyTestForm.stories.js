@@ -1,7 +1,6 @@
 import React from "react"
-import "antd/dist/antd.css"
-import
-{
+import "antd/dist/antd.less"
+import {
   Form,
   Collapse,
   Select,
@@ -17,7 +16,7 @@ import
   Checkbox,
   Row,
   Col,
-  Card
+  Card,
 } from "antd"
 
 export default {
@@ -32,8 +31,7 @@ const GenderRadioGroup = props => (
   </Radio.Group>
 )
 
-const FormItem = props =>
-{
+const FormItem = props => {
   const { fieldKey, fieldValue, getFieldDecorator } = props
 
   return (
@@ -64,11 +62,11 @@ const fieldData2 = {
       required: true,
       labelCol: {
         sm: { span: 6 },
-        md: { span: 6 , order:2},
+        md: { span: 6, order: 2 },
       },
       wrapperCol: {
         sm: { span: 18 },
-        md: { span: 18 , order: 1},
+        md: { span: 18, order: 1 },
       },
     },
     state: {},
@@ -170,39 +168,35 @@ const fieldData2 = {
 
 const NakedForm = Form.create({
   name: "HSC",
-  mapPropsToFields(props)
-  {
+  mapPropsToFields(props) {
     const mappedFields = {}
     // fieldData.forEach(e =>
     // {
     //   mappedFields[e.key] = Form.createFormField({ ...props[e.key] })
     // })
-    Object.keys(fieldData2).forEach(key =>
-    {
+    Object.keys(fieldData2).forEach(key => {
       mappedFields[key] = Form.createFormField({ ...props[key] })
     })
+    console.debug("mappedFields", mappedFields)
     return mappedFields
   },
-  onFieldsChange(props, changedFields)
-  {
+  onFieldsChange(props, changedFields) {
     props.onChange(changedFields)
   },
   // onValuesChange(_, values){},
   // validateMessages:{}
-})(props =>
-{
+})(props => {
   const { getFieldDecorator } = props.form
   return (
     <Form
       hideRequiredMark={false}
-      labelAlign='left'
+      labelAlign="left"
       labelCol={{ span: 12 }}
       wrapperCol={{ span: 12 }}
-      layout='horizontal'
+      layout="horizontal"
       colon={false}
-
     >
-      <Row type='flex' justify='start'>
+      <Row type="flex" justify="start">
         <Col md={12}>
           <FormItem
             fieldKey="age"
@@ -226,9 +220,8 @@ const NakedForm = Form.create({
             getFieldDecorator={getFieldDecorator}
           />
         </Col>
-        
       </Row>
-       <Row>
+      <Row>
         <Col md={12}>
           <FormItem
             fieldKey="abh"
@@ -236,16 +229,13 @@ const NakedForm = Form.create({
             getFieldDecorator={getFieldDecorator}
           />
         </Col>
-        
       </Row>
     </Form>
   )
 })
 
-class WrappedForm extends React.Component
-{
-  constructor(props)
-  {
+class WrappedForm extends React.Component {
+  constructor(props) {
     super(props)
     // let fieldStates = {}
     // Object.entries(fieldData2).forEach(([k, v]) => (fieldStates[k] = v.state))
@@ -255,15 +245,13 @@ class WrappedForm extends React.Component
     // console.debug("Constructor:state", this.state)
     this.handleFormChange = this.handleFormChange.bind(this)
   }
-  handleFormChange = changedFields =>
-  {
+  handleFormChange = changedFields => {
     this.setState(({ fields }) => ({
       fields: { ...fields, ...changedFields },
     }))
   }
 
-  render()
-  {
+  render() {
     const { fields } = this.state
     return (
       <div>
@@ -274,19 +262,23 @@ class WrappedForm extends React.Component
           <Col sm={12}>
             <Row>
               <Col>
-                <Card title='Recommendations'>
-                  <p>The recommended tests will appear here alongwith the evidence behind the Recommendations.</p>
+                <Card title="Recommendations">
+                  <p>
+                    The recommended tests will appear here alongwith the
+                    evidence behind the Recommendations.
+                  </p>
                 </Card>
-                </Col>
-              </Row>
+              </Col>
+            </Row>
             <Row>
               <Col>
-                <Card title='Live updating data: will eventually become the clinic letter'>
-                  <pre className="language-bash">{JSON.stringify(fields, null, 2)}</pre>
-                  </Card>
-                </Col>
+                <Card title="Live updating data: will eventually become the clinic letter">
+                  <pre className="language-bash">
+                    {JSON.stringify(fields, null, 2)}
+                  </pre>
+                </Card>
+              </Col>
             </Row>
-            
           </Col>
         </Row>
       </div>

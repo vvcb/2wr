@@ -1,29 +1,43 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { Layout, Typography } from "antd"
+// import "styles/style.less"
 
-// custom components
-
-import Header from "components/Header/Header"
-
+const { Header, Footer, Sider, Content } = Layout
 const defaultLayout = ({ children }) => (
-  <>
-    <Header siteTitle="Test site" />
-    <div
+  <Layout
+    style={{
+      maxWidth: "90%",
+      margin: "auto",
+      alignContent: "center",
+      justifyContent: "center",
+    }}
+  >
+    <Header
       style={{
-        margin: `60px`,
-        padding: `0px 1.0875rem 1.45rem`,
-        paddingTop: 0,
+        padding: "30px 20px",
+        boxShadow:
+          "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
       }}
     >
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-    </div>
-  </>
+      <Typography.Title>2WW Clinical Decision Support System</Typography.Title>
+    </Header>
+    <Layout>
+      {/* <Sider>Options Treeview</Sider> */}
+      <Content
+        style={{
+          padding: "30px 50px",
+          boxShadow:
+            "0 16px 24px 2px rgba(200, 50, 50, 0.14), 0 6px 30px 5px rgba(78, 171, 255, 0.12), 0 8px 10px -5px rgba(78, 171, 255, 0.2)",
+        }}
+      >
+        {children}
+      </Content>
+    </Layout>
+    <Footer>
+      Developed by <a href="https://splyntor.ai">Splyntor Labs</a>
+    </Footer>
+  </Layout>
 )
 
 defaultLayout.propTypes = {

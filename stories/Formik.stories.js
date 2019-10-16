@@ -1,86 +1,52 @@
-import React from "react"
+import React from 'react'
+import Radio from 'antd/lib/radio/index'
 import { Formik, Form, Field, ErrorMessage, withFormik } from "formik"
-import { Switch } from "antd"
-import "antd/dist/antd.css"
+import "antd/lib/radio/style/index.js"
 
 export default {
   title: "Formik Forms",
 }
 
 const Basic = () => (
-  <div>
-    <h1>Formik Form</h1>
+  <>
     <Formik
-      initialValues={{ age: "", gender: "male", switch: false }}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
+      initialValues={{ gender: "male" }}
+      
+      onSubmit={(values, actions) =>
+      {
+        setTimeout(() =>
+        {
           alert(JSON.stringify(values, null, 2))
-          setSubmitting(false)
-        }, 400)
+          actions.setSubmitting(false)
+        }, 1000)
       }}
-    >
-      {({ isSubmitting }) => (
+      render={(props) => (
         <Form>
-          <Field name="age" />
-          <Field name="gender" />
-          <Switch name="switch" />
+          <Field id='gender' name='gender'
+            render={({ field }) =>
+            
+              (<Radio.Group {...field}>
+                <Radio.Button value='male'>Good</Radio.Button>
+                <Radio.Button value='female'>Bad</Radio.Button>
+              </Radio.Group>)
+            
+          } />
 
-          <button type="submit" disabled={isSubmitting}>
-            Submit`
-          </button>
+            
+
+          
+          <div>
+            <pre>
+              {JSON.stringify(props, null, 2)}
+            </pre>
+          </div>
         </Form>
+
       )}
-    </Formik>
-  </div>
+
+    />
+  </>
 )
 
-const MyForm = props => {
-  const {
-    values,
-    touched,
-    errors,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-  } = props
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        onChange={handleChange}
-        onBlur={handleBlur}
-        value={values.name}
-        name="name"
-      />
-      {errors.name && touched.name && <div id="feedback">{errors.name}</div>}
-      <button type="submit">Submit</button>
-    </form>
-  )
-}
-
-const MyEnhancedForm = withFormik({
-  mapPropsToValues: () => ({ name: "" }),
-
-  // Custom sync validation
-  validate: values => {
-    const errors = {}
-
-    if (!values.name) {
-      errors.name = "Required"
-    }
-
-    return errors
-  },
-
-  handleSubmit: (values, { setSubmitting }) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2))
-      setSubmitting(false)
-    }, 1000)
-  },
-
-  displayName: "BasicForm",
-})(MyForm)
-
 export const BasicForm = () => <Basic />
-export const withFormikForm = () => <MyEnhancedForm />
+

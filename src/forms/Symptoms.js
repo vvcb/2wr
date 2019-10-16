@@ -38,7 +38,7 @@ const MyEnhancedForm = withFormik({
   },
 
   handleSubmit: (values, { setSubmitting }) => {
-    console.log(values)
+    // console.log(values)s
   },
 
   displayName: "BasicForm",
