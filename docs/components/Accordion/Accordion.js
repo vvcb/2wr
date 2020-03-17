@@ -1,6 +1,6 @@
-import React from "react"
-import { connect, getIn } from "formik"
-import withStyles from "@material-ui/core/styles/withStyles"
+import React from 'react'
+import { connect, getIn } from 'formik'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 const Accordion = props => {
   const formikState = getIn(props.formik, props.name)

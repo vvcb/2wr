@@ -1,7 +1,7 @@
-import React from "react"
-import Layout from "../docs/Layout/DefaultLayout"
-import { Formik, Form, Field } from "formik"
-import { connect, getIn } from "formik"
+import React from 'react'
+import Layout from '../docs/Layout/DefaultLayout'
+import { Formik, Form, Field } from 'formik'
+import { connect, getIn } from 'formik'
 
 const DataDisplay = connect(props => {
   const values = getIn(props.formik, props.name)
@@ -27,8 +27,8 @@ const Form2 = () => (
 export default () => (
   <>
     <Formik
-      initialValues={{ name: "", email: "" }}
-      onSubmit={(values, actions) => console.log("Formik::onSubmit", values)}
+      initialValues={{ name: '', email: '' }}
+      onSubmit={(values, actions) => console.log('Formik::onSubmit', values)}
     >
       <>
         <Layout topLeft={<Form1 />} topRight={<Form2 />} />

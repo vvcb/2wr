@@ -1,13 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Field } from "formik"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Field } from 'formik'
 import {
   Radio,
   RadioGroup,
   FormControl,
   FormControlLabel,
   FormLabel,
-} from "@material-ui/core"
+} from '@material-ui/core'
 
 export class CustomRadio extends React.Component {
   render() {

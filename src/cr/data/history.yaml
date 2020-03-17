@@ -1,0 +1,12 @@
+cardiac:
+  id: cardiac
+  is:
+    label: Cardiovascular Disease
+    initialValue: false
+  data:
+    ihd: IHD
+    mi: MI
+    angina: Angina
+    af: AF
+    htn: HTN
+

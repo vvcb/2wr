@@ -1,23 +1,23 @@
 // React
 // ===========================================================================
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 // material-ui
 // ===========================================================================
-import AppBar from "@material-ui/core/AppBar"
-import Typography from "@material-ui/core/Typography"
-import Toolbar from "@material-ui/core/Toolbar"
-import Button from "@material-ui/core/Button"
-import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@material-ui/icons/Menu"
-import withStyles from "@material-ui/styles/withStyles"
+import AppBar from '@material-ui/core/AppBar'
+import Typography from '@material-ui/core/Typography'
+import Toolbar from '@material-ui/core/Toolbar'
+import Button from '@material-ui/core/Button'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import withStyles from '@material-ui/styles/withStyles'
 // custom components
 // ===========================================================================
 
 // gatsby
 // ===========================================================================
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
 // icons
 // ===========================================================================
@@ -32,7 +32,7 @@ const styles = {
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: "10px",
+    marginRight: '10px',
   },
   title: {
     flexGrow: 1,

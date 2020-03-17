@@ -1,7 +1,7 @@
-import React from "react"
-import withStyles from "@material-ui/core/styles/withStyles"
-import PropTypes from "prop-types"
-import { Field } from "formik"
+import React from 'react'
+import withStyles from '@material-ui/core/styles/withStyles'
+import PropTypes from 'prop-types'
+import { Field } from 'formik'
 import {
   Radio,
   RadioGroup,
@@ -9,7 +9,7 @@ import {
   FormControlLabel,
   FormLabel,
   Grid,
-} from "@material-ui/core"
+} from '@material-ui/core'
 
 class CustomRadio extends React.Component {
   render() {
@@ -28,7 +28,7 @@ class CustomRadio extends React.Component {
                   <FormControlLabel
                     key={value}
                     value={value}
-                    control={<Radio className={classes.radioLabel} />}
+                    control={<Radio />}
                     label={label}
                     className={classes.radioLabel}
                   />
@@ -54,13 +54,13 @@ const styles = {
     // paddingRight: '6px',
   },
   radio: {
-    fontSize: "8px",
+    fontSize: '8px',
   },
   radioLabel: {
-    fontSize: "1rem",
+    fontSize: '1rem',
   },
   formControl: {
-    margin: "0 5px 20px",
+    margin: '0 5px 20px',
   },
 }
 

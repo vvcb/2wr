@@ -1,15 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Typography,
   ExpansionPanel,
   ExpansionPanelSummary,
   ExpansionPanelDetails,
   ExpansionPanelActions,
-} from "@material-ui/core"
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import { connect, getIn, Field } from "formik"
-import withStyles from "@material-ui/core/styles/withStyles"
+} from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { connect, getIn, Field } from 'formik'
+import withStyles from '@material-ui/core/styles/withStyles'
 export const AccordionPanel = props => {
   const {
     name,
@@ -63,10 +63,10 @@ AccordionPanel.propTypes = {
 
 const styles = {
   root: {
-    width: "100%",
+    width: '100%',
   },
   title: {
-    flexBasis: "33.33%",
+    flexBasis: '33.33%',
     flexShrink: 0,
   },
   details: {},

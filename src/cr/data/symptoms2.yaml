@@ -1,0 +1,106 @@
+- id: prb
+  is:
+    label: Rectal bleeding
+    initialValue: false
+  - field: character
+    data: 
+      fresh: Fresh
+      mixed: Mixed
+      dark: Dark
+    label: Character
+  - field: severity
+    initialValue: ''
+    data: 
+      mild: Mild
+      moderate: Moderate
+      severe: Severe
+    label: Severity
+    initialValue: ''
+  - field: pain
+    data: 
+      no: No Pain
+      sharp: Sharp Pain
+      discomfort: Discomfort
+    label: Perianal Pain
+    initialValue: ''
+- id: abh
+  is:
+    label: Altered Bowels
+    initialValue: false
+  - field: character
+    data:
+      loose: Loose
+      varied: Variable
+      constipated: Constipation
+    label: Character
+    initialValue: ''
+  - field: cause
+    data:
+      unknown: Unknown
+      diet: Diet
+      drugs: Drugs
+      stress: Stress
+      multifactorial: Multifactorial
+    label: Cause
+    initialValue: ''
+- id: wtloss
+  is:
+    label: Weight Loss
+    initialValue: false
+  - field: cause
+    data:
+      intentional: Intentional
+      unintentional: Unintentional
+      alternative: Other cause
+    label: Cause
+    initialValue: ''
+  severity: *severity
+- id: anaemia
+  is:
+    label: Anaemia
+    initialValue: false
+  - field: hb
+    label: Haemoglobin
+    initialValue: 'normal'
+    data:
+      low: Low
+      normal: Normal/High
+- id: abdopain
+  is:
+    label: Abdominal Pain
+    initialValue: false
+  - field: location
+    label: Location
+    initialValue: ''
+    data:
+      generalised: generalised
+      rif: Right iliac fossa
+      lif: Left iliac fossa
+      ruq: Right upper quadrant
+      luq: Left upper quadrant
+      epi: Epigastric
+      spc: Suprapubic
+      lf: Left flank
+      rf: Right flank
+  - field: onset
+    label: Onset
+    initialValue: ''
+    data:
+      sudden: Sudden
+      gradual: Gradual
+  - field: character
+    label: Character
+    initialValue: ''
+    data: 
+      sharp: Sharp,stabbing
+      colic: Colicky
+      dull: Dull
+      throbbing: Throbbing
+      burning: Burning
+  - field: duration
+    label: Duration
+    initialValue: ''
+    data:
+      constant: Constant
+      intermittent: Intermittent
+

@@ -1,2 +1,2 @@
-import { CustomRadio } from "./CustomRadio"
+import { CustomRadio } from './CustomRadio'
 export default CustomRadio

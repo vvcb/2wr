@@ -1,0 +1,121 @@
+prb:
+  id: prb
+  is:
+    label: Rectal bleeding
+    initialValue: false
+  character: 
+    data: 
+      fresh: Fresh
+      mixed: Mixed
+      dark: Dark
+    label: Character
+    initialValue: ''
+  severity: &severity
+    data: 
+      mild: Mild
+      moderate: Moderate
+      severe: Severe
+    label: Severity
+    initialValue: ''
+  pain: 
+    data: 
+      no: No Pain
+      sharp: Sharp Pain
+      discomfort: Discomfort
+    label: Perianal Pain
+    initialValue: ''
+abh:
+  id: abh
+  is:
+    label: Altered Bowels
+    initialValue: false
+  character:
+    data:
+      loose: Loose
+      varied: Variable
+      constipated: Constipation
+    label: Character
+    initialValue: ''
+  severity: *severity
+  cause:
+    data:
+      unknown: Unknown
+      diet: Diet
+      drugs: Drugs
+      stress: Stress
+      multifactorial: Multifactorial
+    label: Cause
+    initialValue: ''
+wtloss:
+  id: wtloss
+  is:
+    label: Weight Loss
+    initialValue: false
+  cause:
+    data:
+      intentional: Intentional
+      unintentional: Unintentional
+      # alternative: Other cause
+    label: Cause
+    initialValue: ''
+  severity: *severity
+anaemia:
+  id: anaemia
+  is:
+    label: Anaemia
+    initialValue: false
+  severity: *severity
+  type:
+    label: MCV
+    initialValue: ''
+    data:
+      micro: Microcytic
+      norm: Normocytic
+      macro: Macrocytic
+  cause:
+    label: Cause
+    initialValue: ''
+    data: 
+      ida: Iron deficiency
+      chr: Chronic disease
+abdopain:
+  id: abdopain
+  is:
+    label: Abdominal Pain
+    initialValue: false
+  severity: *severity
+  location:
+    label: Location
+    initialValue: ''
+    data:
+      generalised: generalised
+      rif: Right iliac fossa
+      lif: Left iliac fossa
+      ruq: Right upper quadrant
+      luq: Left upper quadrant
+      epi: Epigastric
+      spc: Suprapubic
+      lf: Left flank
+      rf: Right flank
+  onset:
+    label: Onset
+    initialValue: ''
+    data:
+      sudden: Sudden
+      gradual: Gradual
+  character:
+    label: Character
+    initialValue: ''
+    data: 
+      sharp: Sharp,stabbing
+      colic: Colicky
+      dull: Dull
+      throbbing: Throbbing
+      burning: Burning
+  duration:
+    label: Duration
+    initialValue: ''
+    data:
+      constant: Constant
+      intermittent: Intermittent
+

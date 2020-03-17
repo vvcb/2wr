@@ -1,7 +1,7 @@
-import React from "react"
-import FormItem from "../docs/FormikForm/FormItem"
+import React from 'react'
+import FormItem from '../docs/FormikForm/FormItem'
 
-import { Input, InputNumber, Radio, Row, Col } from "antd"
+import { Input, InputNumber, Radio, Row, Col } from 'antd'
 
 const GenderRadioGroup = props => (
   <Radio.Group {...props} buttonStyle="solid">
@@ -13,19 +13,19 @@ const GenderRadioGroup = props => (
 
 const data = {
   gender: {
-    id: "gender",
+    id: 'gender',
     component: GenderRadioGroup,
     componentProps: {
-      key: "gender",
-      id: "gender",
-      name: "gender",
+      key: 'gender',
+      id: 'gender',
+      name: 'gender',
     },
     fieldDecoratorOptions: {
-      rules: [{ required: true, message: "Required field!" }],
+      rules: [{ required: true, message: 'Required field!' }],
     },
     formItemOptions: {
       colon: false,
-      label: "Gender",
+      label: 'Gender',
       required: true,
       labelCol: {
         sm: { span: 6 },
@@ -39,28 +39,28 @@ const data = {
     state: {},
   },
   age: {
-    id: "age",
+    id: 'age',
     component: InputNumber,
     componentProps: {
-      key: "age",
-      id: "age",
-      name: "age",
+      key: 'age',
+      id: 'age',
+      name: 'age',
     },
     fieldDecoratorOptions: {
       // initialValue: 50,
       rules: [
         {
           required: true,
-          type: "number",
+          type: 'number',
           min: 16,
           max: 100,
-          message: "Enter a value between 16 and 100.",
+          message: 'Enter a value between 16 and 100.',
         },
       ],
     },
     formItemOptions: {
       colon: false,
-      label: "Age",
+      label: 'Age',
       required: true,
       labelCol: {
         xs: 12,

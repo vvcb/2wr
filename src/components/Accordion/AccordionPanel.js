@@ -1,15 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Typography,
   ExpansionPanel,
   ExpansionPanelSummary,
   ExpansionPanelDetails,
   ExpansionPanelActions,
-} from "@material-ui/core"
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import { connect, getIn, Field } from "formik"
-import withStyles from "@material-ui/core/styles/withStyles"
+} from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { connect, getIn, Field } from 'formik'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 const _AccordionPanel = props => {
   const {
@@ -53,7 +53,7 @@ const _AccordionPanel = props => {
           className={classes.title}
           component="div"
           variant="overline"
-          color={formikValues.is ? "secondary" : "textSecondary"}
+          color={formikValues.is ? 'secondary' : 'textSecondary'}
         >
           {title}
         </Typography>
@@ -87,13 +87,13 @@ _AccordionPanel.propTypes = {
 
 const styles = {
   root: {
-    width: "100%",
+    width: '100%',
   },
 
   summary: {
-    width: "100%",
-    textAlign: "right",
-    textTransform: "lowercase",
+    width: '100%',
+    textAlign: 'right',
+    textTransform: 'lowercase',
   },
   title: {
     // flexBasis: '33.33%',
@@ -102,7 +102,7 @@ const styles = {
   },
   details: {},
   toggle: {
-    marginTop: "-0.1em",
+    marginTop: '-0.1em',
   },
 }
 const AccordionPanel = connect(_AccordionPanel)

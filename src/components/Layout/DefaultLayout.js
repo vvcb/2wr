@@ -1,20 +1,20 @@
-import React from "react"
-import PropTypes from "prop-types"
-import withStyles from "@material-ui/core/styles/withStyles"
-import { withTheme } from "@material-ui/core/styles"
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles"
-import CustomTheme from "./theme1.json"
-import Container from "@material-ui/core/Container"
+import React from 'react'
+import PropTypes from 'prop-types'
+import withStyles from '@material-ui/core/styles/withStyles'
+import { withTheme } from '@material-ui/core/styles'
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
+import CustomTheme from 'themes/theme1'
+import Container from '@material-ui/core/Container'
 
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import Button from "@material-ui/core/Button"
-import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@material-ui/icons/Menu"
-import Paper from "@material-ui/core/Paper"
-import Grid from "@material-ui/core/Grid"
-import Typography from "@material-ui/core/Typography"
-import Helmet from "react-helmet"
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Button from '@material-ui/core/Button'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
+import Helmet from 'react-helmet'
 
 // const theme = createMuiTheme({
 //   palette: {
@@ -60,7 +60,7 @@ const DefaultLayout = props => {
           <Typography variant="h6" className={classes.title}>
             Clinical Decision Support Tool
           </Typography>
-          <Button href={"https://splyntor.ai"} color="inherit">
+          <Button href={'https://splyntor.ai'} color="inherit">
             Splyntor.AI
           </Button>
         </Toolbar>
@@ -84,8 +84,8 @@ const styles = {
     flexGrow: 1,
   },
   appBar: {
-    paddingLeft: "10px",
-    paddingRight: "10px",
+    paddingLeft: '10px',
+    paddingRight: '10px',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -94,11 +94,11 @@ const styles = {
     flexGrow: 1,
   },
   container: {
-    height: "100%",
+    height: '100%',
   },
   paperContent: {
-    padding: "5px",
-    margin: "5px",
+    padding: '5px',
+    margin: '5px',
   },
 }
 
