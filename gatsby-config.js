@@ -43,6 +43,12 @@ module.exports = {
         path: `${__dirname}/src/cr/components`,
       },
     },
+     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/cr/components/common`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,0 +1,33 @@
+endocrine:
+  id: endocrine
+  is:
+    label: Endocrine
+    initialValue: false
+  diabetes:
+    label: Diabetes
+    initialValue: 'no'
+    data:
+      no: No
+      type1: Type 1
+      t2dmdiet: T2DM Diet
+      t2dmoral: T2DM Oral
+      t2dminsulin: T2DM Insulin
+      t2dmboth: T2DM Insulin & Tablets
+  thyroid:
+    label: Thyroid Disease
+    initialValue: 'no'
+    data:
+      no: No
+      hypothyroid: Hypothyroid
+      hyperthyroidism: Hyperthyroidism
+      thyrotoxicosis: Thyrotoxicosis
+      malignancy: Malignancy
+      surgery: Surgery
+  other:
+    label: Others
+    initialValue: 'no'
+    data:
+      no: No
+      pituitary: Pituitary
+      adrenal: Adrenal
+      gonadal: Gonadal

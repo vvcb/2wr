@@ -21,7 +21,16 @@ export default {
       minHeight: 56,
     },
   },
-  overrides: {},
+  overrides: {
+    MuiSvgIcon: {
+      root: {
+        width: '0.7em',
+        height: '0.7em'
+      }
+     
+    },
+    
+  },
   palette: {
     action: {
       active: 'rgba(0, 0, 0, 0.54)',

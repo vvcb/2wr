@@ -16,11 +16,12 @@ const SymptomTemplate = props => {
       {...rest}
     >
       {/* <Duration fieldName={makeFieldName(id, 'duration')}/> */}
+      <Duration parentId={id}/>
       <Grid container spacing={2}>
         {Object.entries(fields).map(([k, v]) => {
           const fieldName = makeFieldName(id, k)
           return (
-            <Grid item sm={4} md={3} key={fieldName}>
+            <Grid item sm={6} md={6} lg={4} key={fieldName}>
               <CustomRadio fieldName={fieldName} {...v} />
             </Grid>
           )

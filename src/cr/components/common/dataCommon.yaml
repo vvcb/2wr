@@ -1,0 +1,22 @@
+patientId:
+  forename:
+    label: Forename
+    required: true
+    control: textfield
+  surname:
+    label: Surname
+    required: true
+    control: textfield
+  dob:
+    label: Date of Birth
+    required: true
+    control: textfield
+  mrn: 
+    label: Identifier
+    required: true
+    control: textfield
+  
+
+
+
+

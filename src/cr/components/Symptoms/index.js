@@ -3,9 +3,14 @@ import { _Component as _AlteredBowels } from './AlteredBowels/AlteredBowels'
 import { _Component as _WeightLoss } from './WeightLoss/WeightLoss'
 import { _Component as _AdbdoPain } from './AbdoPain/AbdoPain'
 import { _Component as _Anaemia } from './Anaemia/Anaemia'
-import data from  'cr/data/symptoms.yaml'
+import data from 'cr/data/symptoms.yaml'
+import dataAbdoPain from 'cr/components/Symptoms/AbdoPain/dataAbdoPain.yaml'
+import dataEndocrine from 'cr/components/PastHistory/Endocrine/dataEndocrine.yaml'
 
-function getInitialValues() {
+
+function getInitialValues()
+{
+  Object.assign(data, dataAbdoPain, dataEndocrine)
   const initialValues = {}
   Object.entries(data).forEach(([k, v]) => {
     const { id, ...rest } = v

@@ -23,12 +23,15 @@ class CustomRadio extends React.Component {
           return (
             <FormControl variant="outlined" className={classes.formControl}>
               <FormLabel className={classes.label}>{label}</FormLabel>
-              <RadioGroup aria-label={label} {...field}>
+              <RadioGroup
+                // row={true}
+                aria-label={label}
+                {...field}>
                 {Object.entries(data).map(([value, label]) => (
                   <FormControlLabel
                     key={value}
                     value={value}
-                    control={<Radio />}
+                    control={<Radio size='small'/>}
                     label={label}
                     className={classes.radioLabel}
                   />
@@ -54,13 +57,16 @@ const styles = {
     // paddingRight: '6px',
   },
   radio: {
-    fontSize: '8px',
+    fontSize: '0.8rem',
   },
   radioLabel: {
-    fontSize: '1rem',
+    fontSize: '0.8rem',
   },
   formControl: {
-    margin: '0 5px 20px',
+    margin: '0 5px 10px',
+    // display: 'flex',
+    // flexDirection: 'row',
+    // flexWrap:'wrap'
   },
 }
 

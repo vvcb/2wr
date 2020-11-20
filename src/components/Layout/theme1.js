@@ -21,7 +21,13 @@ module.exports = {
       minHeight: 56,
     },
   },
-  overrides: {},
+  overrides: {
+    MuiSvgIcon: {
+        width: '0.75em',
+        height: '0.75em'
+     
+    }
+  },
   palette: {
     action: {
       active: 'rgba(0, 0, 0, 0.54)',

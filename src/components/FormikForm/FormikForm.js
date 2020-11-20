@@ -1,6 +1,8 @@
 import React from 'react'
 import { Formik, Form, Field } from 'formik'
 import { Grid, Box, Switch, Paper, Typography } from '@material-ui/core'
+import { withStyles } from '@material-ui/styles'
+
 import Accordion from 'components/Accordion'
 // import RectalBleeding from "components/Symptoms/RectalBleeding/RectalBleeding"
 import
@@ -13,17 +15,31 @@ import
 }
   from 'cr/components/Symptoms'
 
-import { makeSummary as prbSummary } from 'cr/components/Symptoms/RectalBleeding/RectalBleeding'
+import
+{
+  Endocrine
+}
+  from 'cr/components/PastHistory'
 
+import
+{
+  PatientId
+}
+  from 'cr/components/common'
+
+import { makeSummary as prbSummary } from 'cr/components/Symptoms/RectalBleeding/RectalBleeding'
 import { initialValues } from 'cr/components/Symptoms'
-import { withStyles } from '@material-ui/styles'
+
+
+
 const DataDisplay = ({ values }) => (
   <Box color="text.primary">
     <pre>{JSON.stringify(values, null, 2)}</pre>
   </Box>
 )
 
-const ClinicLetter = ({ values }) => {
+const ClinicLetter = ({ values }) =>
+{
   const { prb, abh, wtloss } = values
 
   return (
@@ -35,8 +51,10 @@ const ClinicLetter = ({ values }) => {
   )
 }
 
-class FormikForm extends React.Component {
-  render(props) {
+class FormikForm extends React.Component
+{
+  render(props)
+  {
     const { classes } = this.props
     return (
       <>
@@ -48,16 +66,23 @@ class FormikForm extends React.Component {
           render={props => (
             <Grid item sm={12}>
               <Grid container spacing={2} className={classes.topHalf}>
-                <Grid item sm={12} md={6} lg={4}>
+                <Grid item sm={12} md>
                   <Paper className={classes.paper} elevation={0}>
                     <Form>
-                      <Accordion>
-                        {RectalBleeding}
-                        {AlteredBowels}
-                        {WeightLoss}
-                        {AbdoPain}
-                        {Anaemia}
-                      </Accordion>
+                      <>
+                        <Accordion>
+                          {PatientId}
+                          {RectalBleeding}
+                          {AlteredBowels}
+                          {WeightLoss}
+                          {AbdoPain}
+                          {Anaemia}
+                        </Accordion>
+                        <Accordion>
+                          {Endocrine}
+                          {Endocrine}
+                        </Accordion>
+                      </>
                     </Form>
                   </Paper>
                 </Grid>

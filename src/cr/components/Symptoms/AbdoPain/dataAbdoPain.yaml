@@ -1,0 +1,31 @@
+abdopain:
+  id: abdopain
+  is:
+    label: Abdominal Pain
+    initialValue: false
+  onset:
+    label: Onset
+    initialValue: ''
+    data:
+      sudden: Sudden
+      gradual: Gradual
+  character:
+    label: Character
+    initialValue: ''
+    data: 
+      sharp: Sharp
+      colic: Colicky
+      dull: Dull
+      throbbing: Throbbing
+      burning: Burning
+  duration:
+    label: Duration
+    initialValue: ''
+    data:
+      constant: Constant
+      intermittent: Intermittent
+  durationUnits:
+    label: Duration Units
+    initialValue: 'weeks'
+  location:
+    initialValue: ''

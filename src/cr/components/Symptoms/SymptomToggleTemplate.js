@@ -20,7 +20,7 @@ const SymptomToggleTemplate = props =>
       makeSummary={makeSummary}
       {...rest}
     >
-      <Grid container spacing={2} classes={{ ...classes }}>
+      <Grid container spacing={1} classes={{ ...classes }}>
         <Grid item md={12}>
           <Duration parentId={id} />
         </Grid>
@@ -33,7 +33,7 @@ const SymptomToggleTemplate = props =>
             </Grid>
           )
         })}
-        <Grid item md={12}>
+        <Grid item md={12}> 
           <FreeText parentId={id} />
         </Grid>
       </Grid>
